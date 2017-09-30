@@ -1,0 +1,187 @@
+$mobile: 720px;
+
+/******** END OF GLOBAL VARIABLE *********/
+
+
+body {
+  background-color: #FFF;
+  font-family: 'Helvetica', sans-serif;
+  margin: 0;
+}
+
+#container {
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-bottom: 124px;
+  width: 100%;
+  .frame-container {
+    background-image: url("../images/tumblr-2.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 660px;
+    position: relative;
+    pointer-events: none;
+    margin: 0 auto;
+    margin-bottom: 64px;
+    width: 100%;
+    z-index: 0;
+    @media screen and (max-width: $mobile) and (max-width: 1000px){
+    }
+    img.tumblr-logo {
+      display: inline-block;
+      float: right;
+      margin-top: 600px;
+      margin-right: 36px;
+      width: 120px;
+      @media screen and (max-width: $mobile){
+        left: 72vw;
+      }
+    }
+    .case-description {
+      color: white;
+      display: inline-block;
+      font-size: 1rem;
+      position: absolute;
+      top: 24px;
+      left: 36px;
+      .description {
+        font-weight: 500;
+        position: relative;
+        margin: 8px 0 0 0;
+        text-shadow: 5px -4px 20px #0000FF;
+        z-index: 4;
+        .header-link {
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  #info-container {
+    margin: 0 auto;
+    max-width: 680px;
+    width: 104vh;
+    @media screen and (max-width: $mobile){
+      margin: 20px auto;
+      width: 94%;
+    }
+    .title-container {
+      margin: 80px 0 0px 0;
+      text-align: center;
+      width: 100%;
+      @media screen and (max-width: $mobile){
+        margin: 56px 0 0px 0;
+      }
+      .info-title {
+        font-family: "Georgia", Times, serif;
+        font-size: 1.3rem;
+        font-style: italic;
+        font-weight: 600;
+        margin: 40px auto;
+      }
+    }
+    .info {
+      font-size: 1.25rem;
+      line-height: 28px;
+      margin: 24px auto;
+      text-indent: 50px;
+      width: 100%;
+      .link {
+        color: #0000FF;
+        text-decoration: none;
+        &:hover {
+          background-color: yellow;
+        }
+      }
+    }
+    .image {
+      margin: 0 auto;
+      margin-top: 24px;
+      margin-bottom: 24px;
+      width: 100%;
+      @media screen and (max-width: $mobile){
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+    .sub {
+      color: #656565;
+      font-family: "Georgia", Times, serif;
+      font-style: italic;
+      text-indent: 0;
+      margin: 16px auto;
+      max-width: 680px;
+      width: 80vh;
+      @media screen and (max-width: $mobile){
+        max-width: 508px;
+        width: 94%;
+      }
+    }
+  }
+  #mobile-video-container {
+    margin: 0 auto;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    text-align: center;
+    width: 100%;
+    #mobile-video-viewport {
+      display: inline-block;
+      margin: 0 auto;
+      margin-right: 64px;
+      margin-left: 64px;
+      position: relative;
+      top: 0;
+      left:0;
+      overflow: hidden;
+      width: 24vw;
+      z-index: 1; /* for accessing the video by click */
+      @media screen and (max-width: $mobile){
+        margin-bottom: 64px;
+        width: 60vw;
+      }
+    }
+  }
+  #initial {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    .initial-image {
+      margin: 0 auto;
+      width: 90%;
+    }
+  }
+  .mobile-image-container {
+    margin: 0 auto;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    text-align: center;
+    width: 100%;
+    .post-image {
+      display: inline-block;
+      margin: 0 auto;
+      margin-right: 8px;
+      margin-left: 8px;
+      margin-bottom: 16px;
+      position: relative;
+      top: 0;
+      left:0;
+      overflow: hidden;
+      width: 20vw;
+      @media screen and (max-width: $mobile){
+        width: 42vw;
+      }
+    }
+  }
+  .button-link {
+    border-radius: 100px;
+    border: 2px solid #000;
+    color: #000;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    padding: 24px 48px;
+    text-decoration: none;
+    text-align: center;
+    width: 100px;
+  }
+}

@@ -1,0 +1,161 @@
+/******** END OF GLOBAL VARIABLE *********/
+body {
+  background-color: #FFF;
+  font-family: 'Arial', sans-serif;
+  margin: 0; }
+
+#container {
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-bottom: 124px;
+  width: 100%; }
+  #container .frame-container {
+    background-image: url("../images/tumblr-2.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 660px;
+    position: relative;
+    pointer-events: none;
+    margin: 0 auto;
+    margin-bottom: 64px;
+    width: 100%;
+    z-index: 0; }
+    #container .frame-container img.tumblr-logo {
+      display: inline-block;
+      float: right;
+      margin-top: 600px;
+      margin-right: 36px;
+      width: 120px; }
+      @media screen and (max-width: 720px) {
+        #container .frame-container img.tumblr-logo {
+          left: 72vw; } }
+    #container .frame-container .case-description {
+      color: white;
+      display: inline-block;
+      font-size: 1rem;
+      position: absolute;
+      top: 24px;
+      left: 36px; }
+      #container .frame-container .case-description .description {
+        font-weight: 500;
+        position: relative;
+        margin: 8px 0 0 0;
+        text-shadow: 5px -4px 20px #0000FF;
+        z-index: 4; }
+        #container .frame-container .case-description .description .header-link {
+          color: white;
+          text-decoration: none; }
+  #container #info-container {
+    margin: 0 auto;
+    max-width: 680px;
+    width: 104vh; }
+    @media screen and (max-width: 720px) {
+      #container #info-container {
+        margin: 20px auto;
+        width: 94%; } }
+    #container #info-container .title-container {
+      margin: 80px 0 0px 0;
+      text-align: center;
+      width: 100%; }
+      @media screen and (max-width: 720px) {
+        #container #info-container .title-container {
+          margin: 56px 0 0px 0; } }
+      #container #info-container .title-container .info-title {
+        font-family: "Georgia", Times, serif;
+        font-size: 1.3rem;
+        font-style: italic;
+        font-weight: 600;
+        margin: 40px auto; }
+    #container #info-container .info {
+      font-size: 1.25rem;
+      line-height: 28px;
+      margin: 24px auto;
+      text-indent: 50px;
+      width: 100%; }
+      #container #info-container .info .link {
+        color: #0000FF;
+        text-decoration: none; }
+        #container #info-container .info .link:hover {
+          background-color: yellow; }
+    #container #info-container .image {
+      margin: 0 auto;
+      margin-top: 24px;
+      margin-bottom: 24px;
+      width: 100%; }
+      @media screen and (max-width: 720px) {
+        #container #info-container .image {
+          margin: 0 auto;
+          width: 100%; } }
+    #container #info-container .sub {
+      color: #656565;
+      font-family: "Georgia", Times, serif;
+      font-style: italic;
+      text-indent: 0;
+      margin: 16px auto;
+      max-width: 680px;
+      width: 80vh; }
+      @media screen and (max-width: 720px) {
+        #container #info-container .sub {
+          max-width: 508px;
+          width: 94%; } }
+  #container #mobile-video-container {
+    margin: 0 auto;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    text-align: center;
+    width: 100%; }
+    #container #mobile-video-container #mobile-video-viewport {
+      display: inline-block;
+      margin: 0 auto;
+      margin-right: 64px;
+      margin-left: 64px;
+      position: relative;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      width: 24vw;
+      z-index: 1;
+      /* for accessing the video by click */ }
+      @media screen and (max-width: 720px) {
+        #container #mobile-video-container #mobile-video-viewport {
+          margin-bottom: 64px;
+          width: 60vw; } }
+  #container #initial {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%; }
+    #container #initial .initial-image {
+      margin: 0 auto;
+      width: 90%; }
+  #container .mobile-image-container {
+    margin: 0 auto;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    text-align: center;
+    width: 100%; }
+    #container .mobile-image-container .post-image {
+      display: inline-block;
+      margin: 0 auto;
+      margin-right: 8px;
+      margin-left: 8px;
+      margin-bottom: 16px;
+      position: relative;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      width: 20vw; }
+      @media screen and (max-width: 720px) {
+        #container .mobile-image-container .post-image {
+          width: 42vw; } }
+  #container .button-link {
+    border-radius: 100px;
+    border: 2px solid #000;
+    color: #000;
+    margin: 0 auto;
+    padding: 10px 24px;
+    text-decoration: none;
+    text-align: center;
+    width: 100px; }
+
+/*# sourceMappingURL=output2.css.map */

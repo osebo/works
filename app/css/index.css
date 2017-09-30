@@ -1,0 +1,195 @@
+/******** END OF GLOBAL VARIABLE *********/
+body {
+  background-color: #FFFFFF;
+  font-family: 'Helvetica', sans-serif;
+  margin: 0; }
+
+#container {
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  width: 100%; }
+  #container #gradient {
+    height: 600px;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    display: block;
+    z-index: 3;
+    background: -moz-linear-gradient(top, transparent 0%, transparent 1%, white 95%);
+    background: -webkit-linear-gradient(top, transparent 0%, transparent 1%, white 95%);
+    background: linear-gradient(to bottom, transparent 0%, transparent 1%, white 95%); }
+    @media screen and (max-width: 720px) {
+      #container #gradient {
+        margin: 2vh 0 0 0; } }
+  #container .frame-container {
+    position: relative;
+    pointer-events: none;
+    margin: 0 auto;
+    margin-bottom: 64px;
+    width: 100%;
+    z-index: 0; }
+    @media screen and (max-width: 720px) {
+      #container .frame-container {
+        width: 100%; } }
+    #container .frame-container .frame-box {
+      height: 600px;
+      display: inline-block;
+      overflow: hidden;
+      pointer-events: none;
+      width: 100%; }
+  #container #content {
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    z-index: 2; }
+    #container #content .case-description {
+      color: white;
+      display: inline-block;
+      font-size: 1rem;
+      position: absolute;
+      top: 24px;
+      left: 36px; }
+      #container #content .case-description .description {
+        font-weight: 500;
+        position: relative;
+        margin: 8px 0 0 0;
+        text-shadow: 5px -4px 20px #0000FF;
+        z-index: 4; }
+        #container #content .case-description .description .header-link {
+          color: white;
+          text-decoration: none; }
+    #container #content #initial {
+      margin: 64px 0 64px 0;
+      text-align: center;
+      width: 100%; }
+      #container #content #initial .initial-image {
+        margin: 0 auto;
+        width: 100%; }
+      #container #content #initial .map {
+        margin: 0 auto;
+        width: 50%; }
+    #container #content #info-container {
+      margin: 0 auto;
+      max-width: 680px;
+      width: 104vh; }
+      @media screen and (max-width: 720px) {
+        #container #content #info-container {
+          margin: 20px auto;
+          width: 94%; } }
+      #container #content #info-container .image {
+        margin: 0 auto;
+        margin-top: 24px;
+        width: 104vh; }
+        @media screen and (max-width: 720px) {
+          #container #content #info-container .image {
+            margin: 0 auto;
+            width: 100%; } }
+      #container #content #info-container .info {
+        font-size: 1.25rem;
+        line-height: 28px;
+        margin: 24px auto;
+        text-indent: 50px;
+        width: 100%; }
+        #container #content #info-container .info .link {
+          color: #0000FF;
+          text-decoration: none; }
+          #container #content #info-container .info .link:hover {
+            background-color: yellow; }
+      #container #content #info-container .no {
+        margin-bottom: 0; }
+      #container #content #info-container .image-sub {
+        color: #999;
+        font-family: "Georgia", Times, serif;
+        font-style: italic;
+        margin: 0 auto;
+        margin-top: 16px;
+        text-align: center; }
+      #container #content #info-container .sub {
+        color: #656565;
+        font-family: "Georgia", Times, serif;
+        font-style: italic;
+        text-indent: 0;
+        margin: 16px auto;
+        max-width: 680px;
+        width: 80vh; }
+        @media screen and (max-width: 720px) {
+          #container #content #info-container .sub {
+            max-width: 508px;
+            width: 94%; } }
+    #container #content #video-container {
+      margin: 0 auto;
+      margin-top: 64px;
+      margin-bottom: 64px;
+      width: 100%; }
+      #container #content #video-container #video-viewport {
+        display: inline-block;
+        position: relative;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: 1;
+        /* for accessing the video by click */ }
+      #container #content #video-container .img-container {
+        text-align: center;
+        margin: 0 auto;
+        width: 100%; }
+        #container #content #video-container .img-container .img {
+          margin: 16vh 0 8vh 0;
+          width: 40%; }
+          @media screen and (max-width: 720px) {
+            #container #content #video-container .img-container .img {
+              top: 16vh;
+              width: 90%; } }
+  #container #mobile-video-container {
+    margin: 0 auto;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    text-align: center;
+    width: 100%; }
+    #container #mobile-video-container #mobile-video-viewport {
+      display: inline-block;
+      margin: 0 auto;
+      margin-right: 64px;
+      margin-left: 64px;
+      position: relative;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      width: 24vw;
+      z-index: 1;
+      /* for accessing the video by click */ }
+      @media screen and (max-width: 720px) {
+        #container #mobile-video-container #mobile-video-viewport {
+          margin-bottom: 64px;
+          width: 60vw; } }
+  #container .title-container {
+    margin: 80px 0 0px 0;
+    text-align: center;
+    width: 100%; }
+    @media screen and (max-width: 720px) {
+      #container .title-container {
+        margin: 56px 0 0px 0; } }
+    #container .title-container .new {
+      margin-top: 0; }
+    #container .title-container .last {
+      margin-top: 140px; }
+    #container .title-container .info-title {
+      font-family: "Georgia", Times, serif;
+      font-size: 1.3rem;
+      font-style: italic;
+      font-weight: 600;
+      margin: 40px auto; }
+  #container .button-link {
+    border-radius: 100px;
+    border: 2px solid #000;
+    color: #000;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    padding: 24px 48px;
+    text-decoration: none;
+    text-align: center;
+    width: 100px; }
+
+/*# sourceMappingURL=index.css.map */

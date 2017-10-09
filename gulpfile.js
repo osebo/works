@@ -8,6 +8,7 @@ var gulp = require('gulp'),
      del = require('del'),
   useref = require('gulp-useref'),
      iff = require('gulp-if'),
+     htmlmin = require('gulp-htmlmin'),
     csso = require('gulp-csso'),
    pages = require('gulp-gh-pages'),
    imagemin = require('gulp-imagemin'),
@@ -92,7 +93,15 @@ gulp.task('imagemin', () =>
         .pipe(gulp.dest('dist/images'))
 );
 
-gulp.task('build', ['html', 'assets', 'uglify', 'imagemin']);
+
+gulp.task('minify', function() {
+  return gulp.src('app/**/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('dist'));
+});
+
+
+gulp.task('build', ['html', 'minify', 'assets', 'uglify', 'imagemin']);
 
 gulp.task('deploy', function(){
   return gulp.src(options.dist + '**/*')

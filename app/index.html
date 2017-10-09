@@ -3,25 +3,72 @@
 <head>
   <title>osebo ~ neat</title>
   <meta name="osebo" content="Osebo Portfolio">
+
+  <!-- build:css css/app.min.css -->
   <link rel="stylesheet" type="text/css" href="css/index.css">
+  <!-- endbuild -->
+
   <link rel="icon" type="image/x-icon" href="images/favicon.png" />
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+  <!-- a-frame extras package https://www.npmjs.com/package/aframe-extras -->
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.3.4/dist/aframe-extras.min.js"></script>
+
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107326540-1"></script>
+
 </head>
 
 <body>
 
-  <div id="container">
+  <div id="neat" class="container">
+
+    <div class="case-description">
+      <p class="description">osebo / <a href="https://neat.to" class="header-link" target="_blank">https://neat.to</a></p>
+      <p class="description">Role: Co-founder / Product Designer</p>
+    </div>
+
+     <!-- End of AFRAME Scene -->
+
      <div id="gradient"></div>
+     <div id="top-container">
+
+          <a-scene embedded id="main" vr-mode-ui="enabled: false">
+
+              <a-entity id="camera"
+                  camera="fov: 100; zoom: 1.25;"
+                  position="0 2 7">
+              </a-entity>
+
+              <a-entity light="" position="-5 2 5"></a-entity>
+              <a-entity light="" position="5 2 5"></a-entity>
+
+
+              <a-assets>
+                <a-asset-item id="text" src="https://cdn.glitch.com/bc0d3666-6a3a-4d25-8a87-e71cf7f2e287%2Fneat-mark.obj?1505591225778"></a-asset-item>
+                <a-asset-item id="text-mtl" src="https://cdn.glitch.com/bc0d3666-6a3a-4d25-8a87-e71cf7f2e287%2Fneat-mark.mtl?1505591249709"></a-asset-item>
+              </a-assets>
+
+              <a-entity scale="1.5 1.5 1.5">
+
+
+                  <a-entity id="curve-text" position="0 1.5 0"  rotation="80 0 0" scale="2 2 2" obj-model="obj: #text;">
+                      <a-animation attribute="rotation" easing="linear" dur="15000" from="0 0 0" to="360 0 0" repeat="indefinite"></a-animation>
+                  </a-entity>
+
+              </a-entity>
+
+              <a-sky
+                color="#0000FF">
+              </a-sky>
+
+        </a-scene>
+
+      </div>
      <div id="content">
-       <div class="frame-container">
-         <iframe class="frame-box" src="https://neat-3d.glitch.me/" scrolling="no" allowvr="no" allowfullscreen="no" border="0" frameborder="0" ></iframe>
-       </div>
-       <div class="case-description">
-         <p class="description">osebo / <a href="https://neat.to" class="header-link" target="_blank">https://neat.to</a></p>
-         <p class="description">Role: Co-founder / Product Designer</p>
-       </div>
        <div id="info-container">
          <p class="info">
            We consistently find valuable information from across the internet.
@@ -134,7 +181,8 @@
         </div>
         <div id="video-viewport">
          <video playsinline autoplay loop muted preload width="100%;" height="100%">
-             <source src="images/home-feed.mov"/>
+             <source src="images/home-feed.mp4"/>
+             <source src="images/home-feed.webm"/>
          </video>
         </div>
       </div>
@@ -151,7 +199,8 @@
       <div id="video-container">
         <div id="video-viewport">
          <video playsinline autoplay loop muted preload width="100%;" height="100%">
-             <source src="images/overlays.mov"/>
+             <source src="images/overlays.mp4"/>
+             <source src="images/overlays.webm"/>
          </video>
         </div>
       </div>
@@ -166,12 +215,14 @@
       <div id="mobile-video-container">
         <div id="mobile-video-viewport">
          <video playsinline autoplay loop muted preload width="100%;" height="100%">
-             <source src="images/overlay-mobile.mov"/>
+             <source src="images/overlay-mobile.mp4"/>
+             <source src="images/overlay-mobile.webm"/>
          </video>
         </div>
         <div id="mobile-video-viewport">
          <video playsinline autoplay loop muted preload width="100%;" height="100%">
-             <source src="images/neat-proto.mov"/>
+             <source src="images/neat-proto.mp4"/>
+             <source src="images/neat-proto.webm"/>
          </video>
         </div>
       </div>
@@ -192,7 +243,7 @@
       </div>
       <div id="info-container">
            <p class="info">
-            Collections, aim to give users the ability to gather relevant links and share them as a method to display curated lists of useful information.
+            Collections aim to give users the ability to gather relevant links and share them as a method to display curated lists of useful information.
             They will take form of a permalink so users are able to view them without logging. Others can ask to contribute to a collection
             which triggers sign up. They will be embeddable so users can add them to their webpages and share them
             on other platforms.
@@ -211,4 +262,13 @@
           </div>
       </div>
     </div>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-107326540-1');
+    </script>
+
 </body>

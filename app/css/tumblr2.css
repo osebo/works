@@ -4,12 +4,12 @@ body {
   font-family: 'Helvetica', sans-serif;
   margin: 0; }
 
-#container {
+.container {
   flex-wrap: wrap;
   margin: 0 auto;
   margin-bottom: 124px;
   width: 100%; }
-  #container .frame-container {
+  .container .tumblr-frame-container {
     background-image: url("../images/tumblr-2.gif");
     background-size: cover;
     background-repeat: no-repeat;
@@ -21,73 +21,74 @@ body {
     margin-bottom: 64px;
     width: 100%;
     z-index: 0; }
-    #container .frame-container img.tumblr-logo {
+    .container .tumblr-frame-container img.tumblr-logo {
       display: inline-block;
       float: right;
       margin-top: 600px;
       margin-right: 36px;
       width: 120px; }
       @media screen and (max-width: 720px) {
-        #container .frame-container img.tumblr-logo {
+        .container .tumblr-frame-container img.tumblr-logo {
           left: 72vw; } }
-    #container .frame-container .case-description {
+    .container .tumblr-frame-container .case-description {
       color: white;
       display: inline-block;
       font-size: 1rem;
       position: absolute;
       top: 24px;
       left: 36px; }
-      #container .frame-container .case-description .description {
+      .container .tumblr-frame-container .case-description .description {
         font-weight: 500;
         position: relative;
         margin: 8px 0 0 0;
         text-shadow: 5px -4px 20px #0000FF;
         z-index: 4; }
-        #container .frame-container .case-description .description .header-link {
+        .container .tumblr-frame-container .case-description .description .header-link {
           color: white;
           text-decoration: none; }
-  #container #info-container {
+  .container #info-container {
+    color: #4e4e4e;
     margin: 0 auto;
     max-width: 680px;
     width: 104vh; }
     @media screen and (max-width: 720px) {
-      #container #info-container {
+      .container #info-container {
         margin: 20px auto;
         width: 94%; } }
-    #container #info-container .title-container {
+    .container #info-container .title-container {
       margin: 80px 0 0px 0;
       text-align: center;
       width: 100%; }
       @media screen and (max-width: 720px) {
-        #container #info-container .title-container {
+        .container #info-container .title-container {
           margin: 56px 0 0px 0; } }
-      #container #info-container .title-container .info-title {
+      .container #info-container .title-container .info-title {
         font-family: "Georgia", Times, serif;
         font-size: 1.3rem;
         font-style: italic;
         font-weight: 600;
         margin: 40px auto; }
-    #container #info-container .info {
+    .container #info-container .info {
       font-size: 1.25rem;
       line-height: 28px;
       margin: 24px auto;
       text-indent: 50px;
       width: 100%; }
-      #container #info-container .info .link {
+      .container #info-container .info .link {
         color: #0000FF;
         text-decoration: none; }
-        #container #info-container .info .link:hover {
+        .container #info-container .info .link:hover {
           background-color: yellow; }
-    #container #info-container .image {
+    .container #info-container .image {
       margin: 0 auto;
       margin-top: 24px;
       margin-bottom: 24px;
       width: 100%; }
       @media screen and (max-width: 720px) {
-        #container #info-container .image {
+        .container #info-container .image {
           margin: 0 auto;
           width: 100%; } }
-    #container #info-container .sub {
+    .container #info-container .sub {
       color: #656565;
       font-family: "Georgia", Times, serif;
       font-style: italic;
@@ -96,16 +97,16 @@ body {
       max-width: 680px;
       width: 80vh; }
       @media screen and (max-width: 720px) {
-        #container #info-container .sub {
+        .container #info-container .sub {
           max-width: 508px;
           width: 94%; } }
-  #container #mobile-video-container {
+  .container #mobile-video-container {
     margin: 0 auto;
     margin-top: 64px;
     margin-bottom: 64px;
     text-align: center;
     width: 100%; }
-    #container #mobile-video-container #mobile-video-viewport {
+    .container #mobile-video-container #mobile-video-viewport {
       display: inline-block;
       margin: 0 auto;
       margin-right: 64px;
@@ -118,23 +119,26 @@ body {
       z-index: 1;
       /* for accessing the video by click */ }
       @media screen and (max-width: 720px) {
-        #container #mobile-video-container #mobile-video-viewport {
+        .container #mobile-video-container #mobile-video-viewport {
           margin-bottom: 64px;
           width: 60vw; } }
-  #container #initial {
+  .container #initial {
     margin: 0 auto;
     text-align: center;
     width: 100%; }
-    #container #initial .initial-image {
+    .container #initial .initial-image {
       margin: 0 auto;
       width: 90%; }
-  #container .mobile-image-container {
+      @media screen and (max-width: 720px) {
+        .container #initial .initial-image {
+          width: 100%; } }
+  .container .mobile-image-container {
     margin: 0 auto;
     margin-top: 64px;
     margin-bottom: 64px;
     text-align: center;
     width: 100%; }
-    #container .mobile-image-container .post-image {
+    .container .mobile-image-container .post-image {
       display: inline-block;
       margin: 0 auto;
       margin-right: 8px;
@@ -146,9 +150,9 @@ body {
       overflow: hidden;
       width: 20vw; }
       @media screen and (max-width: 720px) {
-        #container .mobile-image-container .post-image {
+        .container .mobile-image-container .post-image {
           width: 42vw; } }
-  #container .button-link {
+  .container .button-link {
     border-radius: 100px;
     border: 2px solid #000;
     color: #000;
@@ -158,5 +162,3 @@ body {
     text-decoration: none;
     text-align: center;
     width: 100px; }
-
-/*# sourceMappingURL=tumblr2.css.map */

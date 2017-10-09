@@ -21,6 +21,7 @@
     "gulp": "^3.8.11",
     "gulp-csso": "^1.0.0",
     "gulp-gh-pages": "^0.5.4",
+    "gulp-htmlmin": "^3.0.0",
     "gulp-if": "^1.2.5",
     "gulp-imagemin": "^3.1.1",
     "gulp-rename": "~1.2.2",
@@ -30,6 +31,7 @@
     "gulp-useref": "^1.2.0"
   },
   "dependencies": {
+    "aframe": "^0.7.0",
     "aos": "^2.1.1",
     "gulp-sass": "^3.1.0"
   }

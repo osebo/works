@@ -9,13 +9,11 @@ body {
   margin: 0;
 }
 
-.container {
+.tumblr-container {
   flex-wrap: wrap;
   margin: 0 auto;
   margin-bottom: 124px;
   width: 100%;
-
-  &#tumblr {}
 
   .tumblr-frame-container {
     background-image: url("../images/tumblr-2.gif");

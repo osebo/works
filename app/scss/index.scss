@@ -5,15 +5,416 @@ $mobile: 720px;
 
 body {
   background-color: #FFFFFF;
-  font-family: 'Helvetica', sans-serif;
   margin: 0;
 }
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    font-family: -apple-system,BlinkMacSystemFont,Helvetica, Arial, sans-serif;
+    font-style: normal;
+    margin: 0;
+    letter-spacing: 0.1px;
+    padding: 0;
+}
+
+.link {
+  color: white;
+  text-decoration: underline;
+}
+
+.index-title-container {
+  background-color: #111;
+  height: 364px;
+  line-height: 28px;
+  margin: 0;
+  width: 100%;
+  z-index: 1;
+  .title {
+    color: white;
+    font-size: 1rem;
+    margin: 0 auto;
+    padding-top: 32px;
+    padding-left: 32px;
+    .big {
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: 400;
+    }
+    .title-link {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  .scroll {
+    color: white;
+    display: inline-block;
+    font-family: "Georgia", Times, serif;
+    font-style: italic;
+    float: left;
+    opacity: 0.5;
+    margin-top: 156px;
+    margin-left: 32px;
+  }
+  .more-info {
+    color: white;
+    display: inline-block;
+    float: right;
+    margin-top: 156px;
+    margin-right: 32px;
+    text-align: right;
+    .info-link {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+  .smile {
+    display: inline-block;
+    float: right;
+    margin-top: 132px;
+    margin-right: 32px;
+    width: 120px;
+    @media screen and (max-width: $mobile){
+      left: 72vw;
+    }
+  }
+}
+
+.main-container{
+
+  &.fixed-tumblr {
+    margin-top: 80px;
+    #tumblr-banner{
+      height: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+  &.fixed-neat {
+    margin-top: 76px;
+    #neat-banner{
+      height: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 3;
+    }
+  }
+  &.fixed-add {
+    margin-top: 76px;
+    #additional-banner{
+      height: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 3;
+    }
+  }
+
+  .container {
+    background-color: white;
+    margin: 0;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+
+    &#tumblr, &#neat{
+      padding-bottom: 140px;
+    }
+
+    #tumblr-banner, #neat-banner, #additional-banner {
+      width: 100%;
+      animation: headline 25s linear infinite;
+
+      -moz-animation:myseccar 25s  linear infinite;
+      -webkit-animation:myseccar 25s  linear infinite;
+      @media screen and (max-width: $mobile){
+        -moz-animation:myseccar 8s  linear infinite;
+        -webkit-animation:myseccar 8s  linear infinite;
+      }
+      .headline {
+        background-color: white;
+        border-top: 1px solid #111;
+        border-bottom: 1px solid #111;
+        color: #111;
+        display: inline-block;
+        font-size: 1.4rem;
+        font-style: italic;
+        font-weight: 400;
+        margin: 0 auto;
+        padding: 2rem 0;
+        position: relative;
+        overflow-x: hidden;
+        white-space: nowrap;
+        z-index: 2;
+        @media screen and (max-width: $mobile){
+          font-size: 1rem;
+          padding: 1.5rem 0;
+        }
+        &.additional-headline {
+          border-bottom: none;
+        }
+        &#neat-banner {
+          position: relative;
+          width: 100%;
+          z-index: 2;
+        }
+      }
+      .headline:hover {
+        animation-play-state: paused;
+      }
+    }
+    #initial {
+      margin: 0;
+      margin-bottom: 96px;
+      text-align: center;
+      width: 100%;
+      z-index: 2;
+      .initial-image {
+        margin: 0 auto;
+        margin-top: 2%;
+        width: 95%;
+      }
+    }
+
+    #neat-index {
+      margin: 0 auto;
+      margin-top: 80px;
+      margin-bottom: 120px;
+      text-align: center;
+      position: relative;
+      width: 100%;
+      z-index: 2;
+      .neat-image {
+        margin: 0 auto;
+        width: 88%;
+      }
+    }
+
+
+    .index-footer {
+      background-color: #111;
+      height: 100%;
+      margin: 0;
+      width: 100%;
+      .footer-works {
+        margin: 0 auto;
+        width: 94%;
+        @media screen and (max-width: $mobile){
+          width: 86%;
+        }
+        .line {
+          border: 0;
+          background-color: #505050;
+          margin: 32px 0 32px auto;
+          height: 1px;
+          width: 100%;
+        }
+        .footer-subhead {
+          color: white;
+          font-family: "Georgia", Times, serif;
+          font-style: italic;
+          opacity: 0.5;
+          padding: 56px 0 8px 0;
+        }
+        .footer-text {
+          color: white;
+          font-size: 1rem;
+          margin: 0;
+          padding: 8px 0 8px 0;
+          line-height: 28px;
+          @media screen and (max-width: $mobile){
+            padding: 32px 0 32px 0;
+          }
+          .additional-title {
+            display: inline-block;
+            float: none;
+            margin-left: 0;
+            width: 32%;
+            @media screen and (max-width: $mobile){
+              font-size: 1.4rem;
+              display: block;
+              width: 100%;
+            }
+          }
+          .additional-description {
+            display: inline-block;
+            float: none;
+            margin-left: 0;
+            margin-top: 4px;
+            @media screen and (max-width: $mobile){
+              display: block;
+              margin-bottom: 24px;
+              width: 100%;
+            }
+          }
+          .additional-link {
+            display: inline-block;
+            float: right;
+            margin-left: 0;
+            text-align: right;
+            @media screen and (max-width: $mobile){
+              display: block;
+              margin: 0 auto;
+              width: 100%;
+            }
+          }
+          .soon {
+            opacity: 0.5;
+          }
+        }
+        .more-info {
+          background-color: #111;
+          color: white;
+          display: inline-block;
+          margin-top: 80px;
+          margin-bottom: 56px;
+          text-align: right;
+          width: 100%;
+          .info-link {
+            color: white;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.footer {
+  background-color: #111;
+  color: #EEE;
+  font-size: 2.5rem;
+  margin: 0 auto;
+  margin-top: 140px;
+  padding: 160px 0 160px 0;
+  text-align: center;
+  text-decoration: underline;
+  width: 100%;
+  &:hover {
+    background-color: #0000FF;
+  }
+}
+
+.button__container {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  perspective: 800px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 1;
+}
+
+.button {
+  margin: 0 auto;
+  width: 140px;
+  height: 140px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  -webkit-animation: bttn-flip 3000ms infinite linear;
+  animation: bttn-flip 3000ms infinite linear;
+  @media screen and (max-width: $mobile){
+    -webkit-animation: none;
+    animation: none;
+  }
+}
+
+.button figure {
+  align-items: center;
+  backface-visibility: hidden;
+  background-color: #FED230;
+  border-radius: 50%;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: block;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  position: absolute;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.button figure.back {
+  background-color: #0000FF;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.button-link {
+  color: white;
+  text-decoration: none;
+}
+
+@keyframes headline {
+  0% {
+    text-indent: 0.5em;
+  }
+  100% {
+    text-indent: -50em;
+  }
+}
+
+@-moz-keyframes myseccar {
+	0%   {right:40%;}
+	100% {right:100%;}
+}
+@-webkit-keyframes myseccar {
+	0%   {right:40%;}
+	100% {right:100%;}
+}
+
+@-webkit-keyframes bttn-flip {
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+
+@keyframes bttn-flip {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+/* End of Index styles */
 
 .container {
   flex-wrap: wrap;
   margin: 0 auto;
-  margin-bottom: 80px;
   width: 100%;
+
+  .frame-container {
+    height: 600px;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    #frame {
+      display: inline-block;
+      height: 600px;
+      overflow: hidden;
+      position: relative;
+      pointer-events: none;
+      margin: 0 auto;
+      width: 100%;
+      z-index: 0;
+    }
+  }
 
   .case-description {
     color: white;
@@ -36,8 +437,9 @@ body {
   }
 
   #top-container {
-    width: 100%;
     height: 600px;
+    pointer-events: none;
+    width: 100%;
   }
 
   #gradient {
@@ -52,6 +454,21 @@ body {
     background: linear-gradient(to bottom, transparent 0%, transparent 1%, white 95%);
     @media screen and (max-width: $mobile){
       margin: 2vh 0 0 0;
+    }
+  }
+  .index-button {
+    top: 32px;
+    color: white;
+    display: inline-block;
+    float: left;
+    left: 32px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    z-index: 3;
+    .link {
+      color: white;
+      text-decoration: underline;
     }
   }
   .tumblr {
@@ -80,27 +497,6 @@ body {
     }
   }
 
-  .frame-container {
-    position: relative;
-    pointer-events: none;
-    margin: 0 auto;
-    margin-bottom: 64px;
-    width: 100%;
-    z-index: 0;
-
-    @media screen and (max-width: $mobile){
-      width: 100%;
-    }
-
-    .frame-box {
-      height: 600px;
-      display: inline-block;
-      overflow: hidden;
-      pointer-events: none;
-      width: 100%;
-    }
-  }
-
   #content {
     display: inline-block;
     margin: 0 auto;
@@ -109,7 +505,7 @@ body {
     z-index: 2;
 
     #initial {
-      margin: 64px 0 64px 0;
+      margin: 140px 0 140px 0;
       text-align: center;
       width: 100%;
       .initial-image {
@@ -124,7 +520,7 @@ body {
     #info-container {
       color: #4e4e4e;
       margin: 0 auto;
-      max-width: 680px;
+      max-width: 624px;
       width: 104vh;
       @media screen and (max-width: $mobile){
         margin: 20px auto;
@@ -142,7 +538,7 @@ body {
       .info {
         font-size: 1.15rem;
         line-height: 28px;
-        margin: 24px auto;
+        margin: 64px auto;
         text-indent: 50px;
         width: 100%;
         .link {
@@ -170,7 +566,7 @@ body {
         font-style: italic;
         text-indent: 0;
         margin: 16px auto;
-        max-width: 680px;
+        max-width: 472px;
         width: 80vh;
         @media screen and (max-width: $mobile){
           max-width: 508px;
@@ -210,8 +606,7 @@ body {
 
   .mobile-image-container {
     margin: 0 auto;
-    margin-top: 64px;
-    margin-bottom: 64px;
+    margin: 140px 0 140px 0;
     text-align: center;
     width: 100%;
     .post-image {
@@ -232,16 +627,21 @@ body {
   }
 
   #mobile-video-container {
+    background-color: #f0f0f0;
     margin: 0 auto;
-    margin-top: 64px;
-    margin-bottom: 64px;
+    margin: 140px 0 140px 0;
     text-align: center;
     width: 100%;
+    .proto-description {
+      color: #999;
+      font-family: "Georgia", Times, serif;
+      font-size: .8rem;
+      font-style: italic;
+      margin-top: 16px;
+    }
     #mobile-video-viewport {
       display: inline-block;
-      margin: 0 auto;
-      margin-right: 64px;
-      margin-left: 64px;
+      margin: 120px 64px 120px 64px;
       position: relative;
       top: 0;
       left:0;
@@ -264,27 +664,15 @@ body {
     .new {
       margin-top: 0;
     }
-    .last {
-      margin-top: 140px;
-    }
     .info-title {
       color: #141414;
       font-family: "Georgia", Times, serif;
-      font-size: 1.3rem;
-      font-style: italic;
+      font-size: 1.4rem;
       font-weight: 600;
       margin: 40px auto;
     }
   }
-  .button-link {
-    border-radius: 100px;
-    border: 2px solid #000;
-    color: #000;
-    font-size: 1.2rem;
-    margin: 0 auto;
-    padding: 24px 48px;
-    text-decoration: none;
-    text-align: center;
-    width: 100px;
+  .last {
+    margin: 120px 0 120px 0;
   }
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <title>osebo ~ neat</title>
+  <title>osebo ~ index</title>
   <meta name="osebo" content="Osebo Portfolio">
 
   <!-- build:css css/app.min.css -->
@@ -20,255 +20,213 @@
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107326540-1"></script>
 
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 
-  <div id="neat" class="container">
+  <div class="index-title-container">
+    <p class="title">
+      <span class="big">Osebo Akhigbe</span>
+      <br />Product Designer
+      <br />Building <a href="https://neat.to" class="title-link" target="_blank">Neat</a>
+      <br />Formerly <a href="http://osebo.tumblr.com" class="title-link" target="_blank">Tumblr</a> & <a href="https://splashthat.com" class="title-link" target="_blank">Splash</a>
 
-    <div class="case-description">
-      <p class="description">osebo / <a href="https://neat.to" class="header-link" target="_blank">https://neat.to</a></p>
-      <p class="description">Role: Co-founder / Product Designer</p>
-    </div>
+   <div class="more-info">
+     <a href="mailto:osebo@osebo.net" class="info-link">osebo@osebo.net</a>
+   </div>
+   <div class="scroll">Works Below</a></div>
+  </div>
 
-     <!-- End of AFRAME Scene -->
+  <div class="main-container">
+    <div class="container" id="tumblr">
 
-     <div id="gradient"></div>
-     <div id="top-container">
-
-          <a-scene embedded id="main" vr-mode-ui="enabled: false">
-
-              <a-entity id="camera"
-                  camera="fov: 100; zoom: 1.25;"
-                  position="0 2 7">
-              </a-entity>
-
-              <a-entity light="" position="-5 2 5"></a-entity>
-              <a-entity light="" position="5 2 5"></a-entity>
-
-
-              <a-assets>
-                <a-asset-item id="text" src="https://cdn.glitch.com/bc0d3666-6a3a-4d25-8a87-e71cf7f2e287%2Fneat-mark.obj?1505591225778"></a-asset-item>
-                <a-asset-item id="text-mtl" src="https://cdn.glitch.com/bc0d3666-6a3a-4d25-8a87-e71cf7f2e287%2Fneat-mark.mtl?1505591249709"></a-asset-item>
-              </a-assets>
-
-              <a-entity scale="1.5 1.5 1.5">
-
-
-                  <a-entity id="curve-text" position="0 1.5 0"  rotation="80 0 0" scale="2 2 2" obj-model="obj: #text;">
-                      <a-animation attribute="rotation" easing="linear" dur="15000" from="0 0 0" to="360 0 0" repeat="indefinite"></a-animation>
-                  </a-entity>
-
-              </a-entity>
-
-              <a-sky
-                color="#0000FF">
-              </a-sky>
-
-        </a-scene>
-
-      </div>
-     <div id="content">
-       <div id="info-container">
-         <p class="info">
-           We consistently find valuable information from across the internet.
-           This information is often collected through links. Unfortunately,
-           we face an on-going problem: we collect links in assorted places for personal use,
-           making them difficult to acces when needed and hidden from others who can find value in them.
-           Sharing information creates social anxiety. When sharing links people
-           are concerned about:
-         </p>
-         <p class="info sub">
-           Their identity being associated with the controversial information they share.
-         </p>
-         <p class="info sub">
-           Bothering others.
-         </p>
-         <p class="info sub">
-           Receiving a lack of adoration.
-         </p>
-         <p class="info">
-          These issues create a gap between people and those who can find value
-          in the information they are gathering. Neat aims to remove the social anxiety that correlates
-          with sharing information on the internet. Our mission is to create a judgement free
-          network for people who love sharing useful information on the internet.
-          This case study outlines the creation of Neat as a Product Designer.
-         </p>
-       </div>
-       <div id="info-container">
-          <div class="title-container">
-            <p class="info-title">Initial Form</p>
-          </div>
-          <p class="info">
-            Neat underwent several iterations before arriving at its current form. The first experience was comprised of a feed where users could
-            create multiple boards in which links could be sorted. This failed. Users found the experience difficult to grok. Users were able to access
-            multiple boards at once while saving, as a result they would save links to the boards that seemed most convenient. As a result user's boards became cluttered and impossible to navigate.
-          </p>
-          <p class="info">
-            We then stripped away complexity and distilled the experience to one linear feed.
-            As a result link saving and revisiting increased. So we added additional requested features such as an overlay for instant
-            revisting. A browser extension for faster saving on the web. A masonry grid, for quicker consumption.
-            A list view for users who wanted to see more metadata associated with their items, in addition to quicker editing.
-          </p>
-       </div>
-       <div id="initial">
-         <img class="initial-image" src="images/neat-1.png">
-       </div>
-
-       <div id="info-container">
-          <div class="title-container">
-            <p class="info-title">New Form</p>
-          </div>
-          <p class="info">
-            In order to understand the best approach for the next iteration of neat, I conducted information architecture to understand how a link relates to a user. Links exist within
-            collections that are created by a user. A user's profile contains all of the collections and links they have accumulated.
-            "Home Room", is the collection for all information on Neat.
-          </p>
-      </div>
-
-      <!--<div id="initial">
-        <img class="map" src="images/neat_taxonomy.png">
-      </div>-->
-
-      <div id="info-container">
-          <p class="info">
-            Saving is an inherent habit to human nature, whether for digital or physical objects. Our goal is to build a product
-            that facilitates this habit. Nir Eyal discusses the process of creating habit forming products through the "hooked cycle". This
-            cycle follows trigger, action, variable reward and investment. Based on feedback we identified how neat
-            fits each criteria of the cycle.
-          </p>
-          <p class="info sub">
-            <b>Internal trigger</b> ~ The fear of losing valuable info.
-          </p>
-          <p class="info sub">
-            <b>External trigger</b> ~ The need to capture links.
-          </p>
-          <p class="info sub">
-            <b>Action</b> ~ The user capturing links by saving.
-          </p>
-          <p class="info sub">
-            <b>Variable Reward</b> ~ Users saving one anothers links.
-          </p>
-          <p class="info sub">
-            <b>Investment</b> ~ Forming collection of links.
-          </p>
-          <p class="info no">
-            With the initial experience, we made it
-            seamless for users to save links, therefore we satisfied their triggers and action. The new challenge
-            was to build an experience that satisfied their variable reward and investment in order to complete the full
-            cycle.
-          </p>
-
-          <p class="info">
-            After further interviews with users we were able to understand how to frame our experience.
-            Profiles needed to be private because people do not want to be judged for what they are saving.
-            In addition people want to categorize the content they find.
-          </p>
-      </div>
-      <div id="initial">
-        <img class="initial-image" src="images/useflow.png">
-      </div>
-      <div id="info-container">
-          <p class="info">
-            In our first release of neat V1.0, we are focusing on allowing user's to save and discover
-            new information what others are saving. This useflow illustrates how neat's updated user experience
-            facilitates this on mobile web.
-          </p>
-      </div>
-      <div id="video-container">
-        <div class="title-container">
-          <p class="info-title">A Neat Interface</p>
-        </div>
-        <div id="video-viewport">
-         <video playsinline autoplay loop muted preload width="100%;" height="100%">
-             <source src="images/home-feed.mp4"/>
-             <source src="images/home-feed.webm"/>
-         </video>
-        </div>
-      </div>
-      <div id="info-container">
-        <p class="info">
-          I simplified the navigation into three components; "Home Room", "Add" and "Profile". Home Room is where all of
-          posts from the community exist. Everytime a user saves a link to their collection, it is surfaced in Home Room. Users can then
-          save links from other users in Home Room to their profile. All posts in Home Room are anonymous. Profile is where all of the users assorted links exist.
-          Users cannot visit one anothers profile. We made all posts square so posts can fit comfortably in each
-          container. Users said that they remember content based on significant events or days
-          so we segmented links by day. Additionaly, we switched to a full screen overlay for better fitting embeds.
+      <div id="tumblr-banner">
+        <p class="headline">
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities —
+          Tumblr 2.0, Communities
         </p>
       </div>
-      <div id="video-container">
-        <div id="video-viewport">
-         <video playsinline autoplay loop muted preload width="100%;" height="100%">
-             <source src="images/overlays.mp4"/>
-             <source src="images/overlays.webm"/>
-         </video>
-        </div>
-      </div>
-      <div id="info-container">
-        <p class="info">
-          I used sketch to design the experience and Framer.js to create high fidelity prototypes for mobile.
-          We used the prototypes to test how people would interact with the mobile web version of Neat. Specifically to
-          understand how people navigate between the Home Room ("Explore" in this prototype), posts and their profile.
-          We noticed that people naturally try to swipe through posts and use the arrow keys as a secondary option.
-        </p>
-      </div>
-      <div id="mobile-video-container">
-        <div id="mobile-video-viewport">
-         <video playsinline autoplay loop muted preload width="100%;" height="100%">
-             <source src="images/overlay-mobile.mp4"/>
-             <source src="images/overlay-mobile.webm"/>
-         </video>
-        </div>
-        <div id="mobile-video-viewport">
-         <video playsinline autoplay loop muted preload width="100%;" height="100%">
-             <source src="images/neat-proto.mp4"/>
-             <source src="images/neat-proto.webm"/>
-         </video>
-        </div>
-      </div>
-      <div id="info-container">
-         <div class="title-container new">
-           <p class="info-title">What's next</p>
-         </div>
-         <p class="info">
-          Through the course of the design of neat, the goal is to keep the experience utilitarian. As we receive feedback we will role out new features
-          that don't disrupt the overall purpose of the product. Users have primarily asked for collections.
-          Thus we are working on giving users the ability to create collections of links that are accessible through Home Room.
-          Other features such as linking items from Home Room to personal feeds
-          will be coming soon.
-         </p>
-      </div>
+
       <div id="initial">
-        <img class="initial-image" src="images/collections.png">
+        <a href="tumblr2.html"><img class="initial-image" src="images/tumblr-index.png"></a>
       </div>
-      <div id="info-container">
-           <p class="info">
-            Collections aim to give users the ability to gather relevant links and share them as a method to display curated lists of useful information.
-            They will take form of a permalink so users are able to view them without logging. Others can ask to contribute to a collection
-            which triggers sign up. They will be embeddable so users can add them to their webpages and share them
-            on other platforms.
-          </p>
-      </div>
-      <div id="info-container">
-           <p class="info">
-            This is an ongoing project, more information coming soon. Credits and additional thank yous to Ryan Luu and Diego Quispe.
-            Please join our community at <a href="https://neat.to" class="link">https://neat.to</a>.
-            If you have any questions feel free to reach out to ~ <a href="mailto:osebo@osebo.net" class="link">osebo@osebo.net</a>.
-          </p>
-      </div>
-      <div id="info-container">
-          <div class="title-container last">
-            <a href="tumblr2.html" class="button-link">Tumblr 2.0 Case Study</a>
+
+      <div class='button-container'>
+        <a href="tumblr2.html" class="button-link">
+          <div class='button'>
+            <figure class='front'> Read </figure>
+            <figure class='back'> Case </figure>
           </div>
+        </a>
       </div>
     </div>
 
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments)};
-      gtag('js', new Date());
+    <div class="container" id="neat">
+      <div id="neat-banner" class="neat-banner">
+        <p class="headline">
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet  —
+          Neat v1.0, A community for organizing the internet
+        </p>
+      </div>
 
-      gtag('config', 'UA-107326540-1');
-    </script>
+      <div id="neat-index">
+        <a href="neat.html"><img class="neat-image" src="images/neat-index.png"></a>
+      </div>
+
+      <div class='button-container'>
+        <a href="neat.html" class="button-link">
+          <div class='button'>
+            <figure class='front'> Read </figure>
+            <figure class='back'> Case </figure>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="container" id="additional">
+
+      <div id="additional-banner" class="neat-banner">
+        <p class="headline additional-headline">
+          Additional Works  —
+          Additional Works  —
+          Additional Works  —
+          Additional Works  —
+          Additional Works  —
+          Additional Works  —
+          Additional Works  —
+          Additional Works  —
+          Additional Works  —
+          Additional Works  —
+          Additional Works  —
+          Additional Works  —
+          Additional Works  —
+          Additional Works  —
+          Additional Works  —
+          Additional Works  —
+          Additional Works  —
+          Additional Works  —
+          Additional Works  —
+          Additional Works  —
+          Additional Works  —
+          Additional Works  —
+          Additional Works  —
+          Additional Works  —
+          Additional Works
+        </p>
+      </div>
+
+      <div class="index-footer">
+        <div class="footer-works">
+          <div class="footer-subhead">An assortment of ongoing recent works</a></div>
+          <hr class="line"></hr>
+          <div class="footer-text">
+            <p class="additional-title">Marisol</p>
+            <p class="additional-description">A solar power charging station.</p>
+            <p class="additional-link soon">Coming soon</p>
+          </div>
+          <hr class="line"></hr>
+          <div class="footer-text">
+            <p class="additional-title">Vumble</p>
+            <p class="additional-description">A leaderboard for online video.</p>
+            <p class="additional-link"><a href="http://vumble.com" class="link" target="_blank">Visit webpage →</a></p>
+          </div>
+          <hr class="line"></hr>
+          <div class="footer-text">
+            <p class="additional-title">Sunday School</p>
+            <p class="additional-description">A book of processing art.</p>
+            <p class="additional-link soon">Coming soon</p>
+          </div>
+          <hr class="line"></hr>
+          <div class="footer-text">
+            <p class="additional-title">Safespace</p>
+            <p class="additional-description">View Tumblr in VR with friends.</p>
+            <p class="additional-link"><a href="https://safe-space.glitch.me" class="link" target="_blank">Visit webpage →</a></p>
+          </div>
+          <hr class="line"></hr>
+          <div class="footer-text">
+            <p class="additional-title">Snellens</p>
+            <p class="additional-description">VR eye examination.</p>
+            <p class="additional-link soon">Coming soon</p>
+          </div>
+          <hr class="line"></hr>
+          <div class="footer-text">
+            <p class="additional-title">Writing Directory</p>
+            <p class="additional-description">A journal of writings.</p>
+            <p class="additional-link soon">Coming soon</p>
+          </div>
+          <div class="more-info">
+            <a href="mailto:osebo@osebo.net" class="info-link">osebo@osebo.net</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)};
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107326540-1');
+  </script>
+
+  <script src="js/scroll.js"></script>
 
 </body>
